@@ -5,7 +5,7 @@ import { UserContext } from "./UserContext";
 export default function Header() {
   const {userInfo,setUserInfo} = useContext(UserContext)
   useEffect(() => {
-    fetch(`http://localhost:4000/profile`, {
+    fetch(`https://car-blog-community-backend.onrender.com/profile`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((userInfo) => {
@@ -17,7 +17,7 @@ export default function Header() {
   const username = userInfo?.username
   
   function logout(){
-    fetch(`http://localhost:4000/logout`, {
+    fetch(`https://car-blog-community-backend.onrender.com/logout`, {
       headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},
       method:'POST',
       credentials:'include'

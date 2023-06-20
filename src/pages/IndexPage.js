@@ -7,7 +7,7 @@ export default function IndexPage() {
   const { userInfo } = useContext(UserContext);
   // console.log(userInfo)
   useEffect(()=>{
-    fetch(`http://localhost:4000/post`).then(res => {
+    fetch(`https://car-blog-community-backend.onrender.com/post`).then(res => {
       res.json().then(posts=>{
         // console.log(posts[0]._id)
         setPost(posts)

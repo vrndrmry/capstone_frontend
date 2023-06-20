@@ -8,7 +8,7 @@ export default function PostPage() {
   const { userInfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`).then((res) => {
+    fetch(`https://car-blog-community-backend.onrender.com/post/${id}`).then((res) => {
       res.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -36,7 +36,7 @@ export default function PostPage() {
       )}
       <div className="image">
         <img
-          src={`http://localhost:4000/${postInfo.cover}`}
+          src={`https://car-blog-community-backend.onrender.com/${postInfo.cover}`}
           alt="postimage"
         ></img>
       </div>

@@ -8,7 +8,7 @@ export default function RegisterPage() {
   const [redirect, setRedirect] = useState(false);
   async function register(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:4000/register", {
+    const response = await fetch("https://car-blog-community-backend.onrender.com/register", {
       method: "POST",
       body: JSON.stringify({ name, username, password }),
       headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},

@@ -9,7 +9,7 @@ export default function DeletePost() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/` + id).then((res) => {
+    fetch(`https://car-blog-community-backend.onrender.com/post/` + id).then((res) => {
       res.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -18,7 +18,7 @@ export default function DeletePost() {
 
   async function deletePost(e) {
     e.preventDefault();
-    const response = await fetch(`http://localhost:4000/post/` + id, {
+    const response = await fetch(`https://car-blog-community-backend.onrender.com/post/` + id, {
       method: "DELETE",
       headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},
       credentials: "include",
