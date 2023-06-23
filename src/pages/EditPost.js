@@ -35,7 +35,7 @@ export default function EditPost() {
       method: "PUT",
       body: data,
       headers:{"Access-Control-Allow-Headers":"*"},
-      credentials:'include'
+      // credentials:'include'
     });
     console.log(response)
     if(response.ok){
