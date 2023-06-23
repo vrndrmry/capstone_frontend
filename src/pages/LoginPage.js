@@ -13,7 +13,7 @@ export default function LoginPage() {
       method:"POST",
       body: JSON.stringify({username,password}),
       headers:{"Content-Type":"application/json","Access-Control-Allow-Headers":"*"},
-      credentials:'include'
+      // credentials:'include'
     })
     if(response.ok){
       response.json().then(userInfo=>{
